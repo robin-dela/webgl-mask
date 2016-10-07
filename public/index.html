@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./build/main.css" media="screen" title="main" charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Facebook -->
+  <meta property="og:image" content="http://robindelaporte.fr/mask/assets/share.jpg">
+  <meta property="og:title" content="WebGl masking with three.js">
+  <meta property="og:url" content="http://robindelaporte.fr/mask">
+  <meta property="og:site_name" content="WebGL masking">
+  <meta name="og:description" content="Little webgl experiment by Robin Delaporte">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@not__robin">
+  <meta property="twitter:title" content="WebGl masking with three.js">
+  <meta name="twitter:creator" content="@not__robin">
+  <meta name="twitter:description" content="Little webgl experiment by Robin Delaporte">
+  <meta property="twitter:image:src" content="http://robindelaporte.fr/mask/assets/share.jpg">
+
+  <title>Masking</title>
+
+</head>
+<body>
+  <div class="toggleWrapper">
+    <input type="checkbox" class="dn" id="dn"/>
+    <label for="dn" class="toggle">
+      <span class="toggle__handler">
+        <span class="crater crater--1"></span>
+        <span class="crater crater--2"></span>
+        <span class="crater crater--3"></span>
+      </span>
+    </label>
+  </div>
+  <script src="./build/main.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37552813-6', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
