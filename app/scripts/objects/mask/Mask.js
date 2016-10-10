@@ -55,7 +55,19 @@ export default class Lighthouse extends THREE.Object3D {
     this.thing = new THREE.Mesh( this.geometryThing, this.materialThing );
     this.add( this.thing );
 
-    this.materialThing.uniforms.needsUpdate = true
+    this.materialThing.uniforms.needsUpdate = true;
+
+    this.textures = {
+      dot : new THREE.TextureLoader().load('./assets/dot.jpg'),
+      heightMap : new THREE.TextureLoader().load('./assets/heightMap.png'),
+      smoke : new THREE.TextureLoader().load('./assets/smoke.jpg'),
+      line : new THREE.TextureLoader().load('./assets/line.jpg'),
+      noise : new THREE.TextureLoader().load('./assets/noise.gif'),
+      weird : new THREE.TextureLoader().load('./assets/weird.jpg'),
+      circle : new THREE.TextureLoader().load('./assets/circle.jpg'),
+      ramen : new THREE.TextureLoader().load('./assets/ramen.jpg'),
+      thing : new THREE.TextureLoader().load('./assets/thing.jpg')
+    }
   }
 
   nightMode(night) {
@@ -77,39 +89,39 @@ export default class Lighthouse extends THREE.Object3D {
       this.changeMask = function(e){
         switch(e){
           case "dot":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/dot.jpg')
+          self.materialThing.uniforms.map.value = self.textures.dot;
           break;
 
           case "random":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/heightMap.png')
+          self.materialThing.uniforms.map.value = self.textures.random;
           break;
 
           case "smoke":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/smoke.jpg')
+          self.materialThing.uniforms.map.value = self.textures.smoke;
           break;
 
           case "line":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/line.jpg')
+          self.materialThing.uniforms.map.value = self.textures.line;
           break;
 
           case "noise":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/noise.gif')
+          self.materialThing.uniforms.map.value = self.textures.noise;
           break;
 
           case "weird":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/weird.jpg')
+          self.materialThing.uniforms.map.value = self.textures.weird;
           break;
 
           case "circle":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/circle.jpg')
+          self.materialThing.uniforms.map.value = self.textures.circle;
           break;
 
           case "ramen":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/ramen.jpg')
+          self.materialThing.uniforms.map.value = self.textures.ramen;
           break;
 
           case "thing":
-          self.materialThing.uniforms.map.value = new THREE.TextureLoader().load('./assets/thing.jpg')
+          self.materialThing.uniforms.map.value = self.textures.thing;
           break;
         }
       }
